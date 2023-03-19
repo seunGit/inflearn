@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술" />
+        <option name="gradleJvm" value="zulu-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
