@@ -21,6 +21,7 @@ public class HellobootApplication {
 		// Spring Boot에서 TomcatServletContainer를 내장해서 지원하는 도우미 클래스
 		ServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
 		WebServer webServer = serverFactory.getWebServer(servletContext -> {
+			HelloController helloController = new HelloController();
 			servletContext.addServlet("frontController", new HttpServlet() {
 				@Override
 				protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -30,9 +31,12 @@ public class HellobootApplication {
 						// name parameter 받기
 						String name = req.getParameter("name");
 
+						String ret = helloController.hello(name);
+
 						res.setStatus(HttpStatus.OK.value()); // 응답코드
 						res.setHeader(HttpHeaders.CONTENT_TYPE, MediaType.TEXT_PLAIN_VALUE); // 콘텐츠타입 헤더
-						res.getWriter().println("Hello " + name); // 바디
+						res.getWriter().println(ret); // 바디
+
 					} else if (req.getRequestURI().equals("/user")) {
 
 					} else {
