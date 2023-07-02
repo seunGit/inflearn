@@ -48,7 +48,6 @@ public class HellobootApplication {
 		});
 		webServer.start(); // 톰캣 서버까지 띄워보기
 
-
 	}
 
 }
